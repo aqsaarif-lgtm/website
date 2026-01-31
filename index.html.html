@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Browser Tab Title -->
+    <title>IslamicJar | Daily Islamic Inspiration</title>
+    
+    <!-- Favicon - Replace 'favicon.png' with your own icon file -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="IslamicJar - Beautiful jars filled with color-coded Islamic verses for daily inspiration, spirituality, and mindfulness.">
+    <meta name="keywords" content="Islamic jar, Quran verses, daily inspiration, Islamic gifts, spiritual reminders">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===================================
+           RESET & BASE STYLES
+           =================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Color Palette - Midnight Blue Theme */
+            --midnight-blue: #1a1f3a;
+            --deep-blue: #0f1626;
+            --accent-blue: #2c3e75;
+            --ivory: #fffff0;
+            --soft-ivory: #fdfdf8;
+            --white: #ffffff;
+            --gold: #d4af37;
+            --light-gold: #f5ead6;
+            --text-black: #000000;
+            --text-dark: #1a1a1a;
+            --text-light: #4a4a4a;
+            --cut-price-red: #dc2626;
+            --shadow: rgba(0, 0, 0, 0.15);
+            
+            /* Typography */
+            --font-arabic: 'Amiri', serif;
+            --font-primary: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.7;
+            color: var(--text-black);
+            background-color: var(--soft-ivory);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===================================
+           HERO SECTION
+           =================================== */
+        .hero {
+            background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(212, 175, 55, 0.08);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(212, 175, 55, 0.08);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .brand-name {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: var(--gold);
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .sub-tagline {
+            font-family: var(--font-arabic);
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            font-weight: 400;
+            color: var(--light-gold);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--gold);
+            color: var(--text-black);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-button:hover {
+            background: #c19b2e;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        /* ===================================
+           VIDEO SECTION
+           =================================== */
+        .video-section {
+            padding: 80px 20px;
+            background: var(--soft-ivory);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--midnight-blue);
+            margin-bottom: 50px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px var(--shadow);
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            border: 3px solid var(--accent-blue);
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ===================================
+           PRODUCTS SECTION
+           =================================== */
+        .products {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, var(--soft-ivory) 0%, var(--ivory) 100%);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+            perspective: 1000px;
+        }
+
+        .product-card {
+            background: var(--ivory);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px var(--shadow);
+            transition: all 0.4s ease;
+            animation: fadeIn 0.8s ease-out;
+            border: 2px solid var(--accent-blue);
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--accent-blue) 100%);
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .product-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(26, 31, 58, 0.05) 100%);
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px) rotateX(5deg) rotateY(-5deg) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 
+                        0 0 40px rgba(212, 175, 55, 0.2);
+            border-color: var(--gold);
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+        }
+
+        .product-card:hover::after {
+            opacity: 1;
+        }
+
+        .product-card:hover {
+    transform: translateY(-15px) rotateX(6deg) rotateY(0deg) scale(1.04);
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35),
+        0 0 45px rgba(212, 175, 55, 0.35);
+    border-color: var(--gold);
+}
+
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            background: var(--light-gold);
+            border-bottom: 3px solid var(--accent-blue);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 25px;
+            background: var(--ivory);
+        }
+
+        .product-name {
+            font-size: 1.4rem;
+            color: var(--midnight-blue);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .product-price {
+            margin-bottom: 15px;
+        }
+
+        .current-price {
+            font-size: 1.8rem;
+            color: var(--text-black);
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        .old-price {
+            font-size: 1.2rem;
+            color: var(--cut-price-red);
+            text-decoration: line-through;
+            font-weight: 500;
+        }
+
+        .product-description {
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .order-button {
+            width: 100%;
+            padding: 14px;
+            background: var(--midnight-blue);
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .order-button:hover {
+            background: var(--accent-blue);
+            transform: scale(1.02);
+        }
+
+        /* ===================================
+           REVIEWS SECTION
+           =================================== */
+        .reviews {
+            padding: 80px 20px;
+            background: var(--midnight-blue);
+            color: var(--white);
+        }
+
+        .reviews .section-title {
+            color: var(--gold);
+        }
+
+        .reviews-slider {
+            max-width: 800px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+
+        .review-track {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .review-card {
+            min-width: 100%;
+            padding: 40px;
+            text-align: center;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.6s ease;
+        }
+
+        .review-card.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .review-text {
+            font-size: 1.3rem;
+            color: var(--ivory);
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .reviewer-name {
+            font-size: 1.1rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .slider-dots .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dots .dot.active {
+            background: var(--gold);
+            width: 30px;
+            border-radius: 6px;
+        }
+
+        /* ===================================
+           ABOUT SECTION
+           =================================== */
+        .about {
+            padding: 80px 20px;
+            background: var(--ivory);
+        }
+
+        .about .section-title {
+            color: var(--midnight-blue);
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            line-height: 1.9;
+        }
+
+        /* ===================================
+           HOW IT WORKS SECTION
+           =================================== */
+        .how-it-works {
+            padding: 80px 20px;
+            background: var(--soft-ivory);
+        }
+
+        .how-it-works .section-title {
+            color: var(--midnight-blue);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background: var(--ivory);
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-blue);
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow);
+            border-color: var(--gold);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--midnight-blue);
+            color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-size: 1.4rem;
+            color: var(--midnight-blue);
+            margin-bottom: 15px;
+        }
+
+        .step p {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* ===================================
+           COLOR CODE SECTION
+           =================================== */
+        .color-code {
+            padding: 80px 20px;
+            background: var(--ivory);
+        }
+
+        .color-code .section-title {
+            color: var(--midnight-blue);
+        }
+
+        .colors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .color-item {
+            text-align: center;
+            padding: 25px;
+            background: var(--soft-ivory);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-blue);
+        }
+
+        .color-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow);
+            border-color: var(--gold);
+        }
+
+        .color-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .color-item h4 {
+            font-size: 1.3rem;
+            color: var(--midnight-blue);
+            margin-bottom: 10px;
+        }
+
+        .color-item p {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        /* ===================================
+           CTA SECTION
+           =================================== */
+        .cta-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* ===================================
+           FOOTER
+           =================================== */
+        .footer {
+            padding: 40px 20px;
+            background: var(--deep-blue);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            color: var(--gold);
+        }
+
+        .footer-copyright {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* ===================================
+           ANIMATIONS
+           =================================== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN
+           =================================== */
+        @media (max-width: 768px) {
+            .brand-name {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .sub-tagline {
+                font-size: 1.3rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+                perspective: none;
+            }
+
+            .product-card:hover {
+                transform: translateY(-10px) scale(1.02);
+            }
+
+            .product-card:nth-child(1):hover,
+            .product-card:nth-child(2):hover,
+            .product-card:nth-child(3):hover {
+                transform: translateY(-10px) scale(1.02);
+            }
+            
+            .steps-grid,
+            .colors-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .review-text {
+                font-size: 1.1rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-section p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 80px 20px;
+            }
+            
+            .brand-name {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+        }
+
+        /* ===================================
+           SCROLL ANIMATIONS
+           =================================== */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .fade-in-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="brand-name">IslamicJar</h1>
+                <p class="tagline">Your Daily Source of Divine Inspiration</p>
+                <p class="sub-tagline">أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</p>
+                <a href="#products" class="cta-button">Explore Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">Experience IslamicJar</h2>
+            <div class="video-container">
+                <!-- REPLACE THE VIDEO URL BELOW WITH YOUR YOUTUBE VIDEO ID -->
+                <!-- Current format: https://www.youtube.com/embed/YOUR_VIDEO_ID -->
+                <iframe 
+                    src="islamicjar.video.mp4" 
+                    title="IslamicJar Product Video" 
+                    frameborder="0" 
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <!-- Alternative: For local MP4 video, replace iframe with: -->
+                <!-- <video controls>
+                    <source src="your-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="products-grid">
+                
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- REPLACE with actual product image -->
+                        <img src="ba449650-8fa5-4aa2-becf-5761442c7883.jpg" alt="IslamicJar 102 Verses">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">IslamicJar – 102 Verses</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs. 1,300</span>
+                            <span class="old-price">Rs. 1,500</span>
+                        </div>
+                        <p class="product-description">Premium jar with 102 color-coded Islamic verses for daily guidance.</p>
+                        <button class="order-button">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- REPLACE with actual product image -->
+                        <img src="IMG-20250908-WA0006.jpg" alt="IslamicJar Gift Edition">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">IslamicJar – 102 Verses (Gift Edition)</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs. 1,300</span>
+                            <span class="old-price">Rs. 1,500</span>
+                        </div>
+                        <p class="product-description">Same verses, perfect for gifting and personal use.</p>
+                        <button class="order-button">Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- REPLACE with actual product image -->
+                        <img src="IMG_20260113_235407.jpg" alt="IslamicJar Small 72 Verses">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">IslamicJar – Small (72 Verses)</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs. 600</span>
+                            <span class="old-price">Rs. 750</span>
+                        </div>
+                        <p class="product-description">Compact jar with 72 meaningful Islamic reminders.</p>
+                        <button class="order-button">Order Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="reviews-slider">
+                <div class="review-track">
+                    
+                    <div class="review-card active">
+                        <p class="review-text">"Islamic Jar mujhe bohot pasand aaya 🎀 Har verse dil ko sukoon deta hai aur moods ke hisaab se perfectly match karta hai. Jab bhi zarurat ho, Allah ke kalaam ki beautiful reminder mil jati hai 💕"</p>
+                        <p class="reviewer-name">— Areeba Gaba</p>
+                    </div>
+
+                    <div class="review-card">
+                        <p class="review-text">"Islamic Jar ki quality bohot achi hai. Packaging bohot neat aur professional thi. Creativity aur effort clearly nazar aata hai — highly appreciated."</p>
+                        <p class="reviewer-name">— Muhammad Adnan</p>
+                    </div>
+
+                    <div class="review-card">
+                        <p class="review-text">"Product bohot amazing hai 👏 Simple, meaningful aur dil se pasand aane wali cheez."</p>
+                        <p class="reviewer-name">— Delbia Est</p>
+                    </div>
+
+                </div>
+                <div class="slider-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About IslamicJar</h2>
+            <div class="about-content">
+                <p>IslamicJar is more than just a product – it's a spiritual companion designed to bring you closer to Allah every single day. Each jar contains carefully selected Quranic verses, duas, and Islamic reminders, beautifully presented on color-coded chits.</p>
+                <p>Whether you're seeking daily inspiration, building a stronger connection with your faith, or looking for the perfect Islamic gift, IslamicJar offers a unique and meaningful experience. Let each verse guide you, comfort you, and strengthen your Iman.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Open the Jar</h3>
+                    <p>Begin your spiritual moment by opening your IslamicJar</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Pick a Chit</h3>
+                    <p>Choose a color-coded chit that speaks to your heart</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Read & Reflect</h3>
+                    <p>Connect with Allah through the verse and let it guide your day</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Code Section -->
+    <section class="color-code">
+        <div class="container">
+            <h2 class="section-title">Color Code Meaning</h2>
+            <div class="colors-grid">
+                <div class="color-item">
+                    <div class="color-box" style="background: linear-gradient(135deg, #1565c0, #42a5f5);"></div>
+                    <h4>Anxiety</h4>
+                    <p>Sukoon dene wali ayat jo dil aur dimagh ko calm karti hain</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box" style="background: linear-gradient(135deg, #c62828, #ef5350);"></div>
+                    <h4>Angry</h4>
+                    <p>Sabr aur control sikhane wali ayat, gusse ke waqt rehnumai ke liye</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box" style="background: linear-gradient(135deg, #6a1b9a, #9c27b0);"></div>
+                    <h4>Sad</h4>
+                    <p>Umeed aur Allah ki rehmat yaad dilane wali ayat</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box" style="background: linear-gradient(135deg, #2e7d32, #4caf50);"></div>
+                    <h4>Thankful</h4>
+                    <p>Shukar aur gratitude ka ehsaas paida karne wali ayat</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box" style="background: linear-gradient(135deg, #f57c00, #ffa726);"></div>
+                    <h4>Happy</h4>
+                    <p>Khushi ke lamhon me Allah ki yaad aur positivity barqarar rakhne wali ayat</p>
+                </div>
+                <div class="color-item">
+                    <div class="color-box" style="background: linear-gradient(135deg, #d4af37, #ffd700);"></div>
+                    <h4>Motivation</h4>
+                    <p>Himmat, strength aur khud par yaqeen barhane wali ayat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Begin Your Spiritual Journey Today</h2>
+            <p>Let IslamicJar be your daily reminder of Allah's guidance and mercy</p>
+            <a href="#products" class="cta-button">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-brand">IslamicJar</p>
+            <p class="footer-copyright">&copy; 2026 IslamicJar. All rights reserved.</p>
+        <p>slamicJar is created with the intention of bringing hearts closer to Allah through daily remembrance and reflection. Each jar is thoughtfully designed with carefully selected Quranic verses, duas, and Islamic reminders that cater to different emotions and moments in life. Whether you are feeling anxious, grateful, happy, sad, or in need of motivation, IslamicJar serves as a gentle reminder that Allah is always near.
+
+Our mission is to encourage mindfulness, strengthen Imaan, and provide spiritual comfort through simple yet meaningful daily practices. IslamicJar is not just a product, but a companion for your spiritual journey and a beautiful way to remember Allah in your everyday life. Perfect for personal use or as a heartfelt Islamic gift, IslamicJar is made with love, care, and faith to spread peace, positivity, and barakah.
+
+“Alaa bi zikrillahi tatma’innul quloob”
+Indeed, in the remembrance of Allah do hearts find peace.</p></div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ===================================
+        // REVIEWS SLIDER FUNCTIONALITY
+        // ===================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Reviews Slider
+            const reviewCards = document.querySelectorAll('.review-card');
+            const sliderDots = document.querySelector('.slider-dots');
+            let currentReview = 0;
+            let autoSlideInterval;
+
+            // Create dots
+            reviewCards.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToReview(index));
+                sliderDots.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll('.dot');
+
+            // Show specific review
+            function showReview(index) {
+                reviewCards.forEach((card, i) => {
+                    card.classList.remove('active');
+                    if (i === index) {
+                        card.classList.add('active');
+                    }
+                });
+
+                dots.forEach((dot, i) => {
+                    dot.classList.remove('active');
+                    if (i === index) {
+                        dot.classList.add('active');
+                    }
+                });
+            }
+
+            // Go to specific review
+            function goToReview(index) {
+                currentReview = index;
+                showReview(currentReview);
+                resetAutoSlide();
+            }
+
+            // Next review
+            function nextReview() {
+                currentReview = (currentReview + 1) % reviewCards.length;
+                showReview(currentReview);
+            }
+
+            // Auto slide
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextReview, 5000); // Change review every 5 seconds
+            }
+
+            // Reset auto slide
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                startAutoSlide();
+            }
+
+            // Start auto sliding
+            startAutoSlide();
+
+            // ===================================
+            // SMOOTH SCROLL FOR CTA BUTTONS
+            // ===================================
+            
+            const ctaButtons = document.querySelectorAll('a[href^="#"]');
+            
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // ===================================
+            // SCROLL ANIMATIONS FOR SECTIONS
+            // ===================================
+            
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Add fade-in class to sections
+            const sections = document.querySelectorAll('.products, .reviews, .about, .how-it-works, .color-code');
+            sections.forEach(section => {
+                section.classList.add('fade-in-section');
+                observer.observe(section);
+            });
+
+            // ===================================
+            // ORDER BUTTON CLICK HANDLER
+            // ===================================
+            
+            const orderButtons = document.querySelectorAll('.order-button');
+            
+            orderButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productCard = this.closest('.product-card');
+                    const productName = productCard.querySelector('.product-name').textContent;
+                    
+                    // You can replace this with actual order/contact functionality
+                    alert(`Thank you for your interest in ${productName}! Please contact us to complete your order.`);
+                    
+                    // Example: You could redirect to WhatsApp, email, or a contact form
+                    // window.location.href = 'https://wa.me/YOUR_NUMBER?text=I want to order ' + productName;
+                });
+            });
+
+            // ===================================
+            // NAVBAR SCROLL EFFECT (Optional)
+            // ===================================
+            
+            let lastScroll = 0;
+            
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                
+                // Add shadow to sections on scroll
+                if (currentScroll > 100) {
+                    document.body.classList.add('scrolled');
+                } else {
+                    document.body.classList.remove('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+
+        });
+    </script>
+</body>
+</html>
